@@ -3,147 +3,242 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museon - Digital Museum Experience</title>
+  <title>Museon - Digital Art Museum & Marketplace</title>
+  <meta name="description" content="Immersive virtual galleries. Buy & sell original art from global artists.">
+  <meta name="keywords" content="art, museum, virtual gallery, marketplace, artists, buy art">
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="Museon - Digital Art Museum & Marketplace">
+  <meta property="og:description" content="Experience art like never before">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1579783902614-a3bd66f832ad">
+  <meta property="og:url" content="https://yourdomain.com">
+  
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-  <script defer src="js/main.js"></script>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-
-  <!-- ================= HEADER ================= -->
+  <!-- HEADER -->
   <header id="main-header" class="header">
     <div class="container header-container">
       <h1 id="logo">Museon</h1>
-      <nav id="main-nav" class="nav">
+      <nav id="main-nav">
         <ul class="nav-list">
           <li><a href="#home">Home</a></li>
           <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#marketplace">Marketplace</a></li>
           <li><a href="#exhibitions">Exhibitions</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="#login" class="btn-login">Login</a></li>
         </ul>
-        <button id="menu-toggle" class="menu-toggle">☰</button>
+        <div class="header-actions">
+          <div class="cart-icon" id="cart-icon" title="Shopping Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+          <a href="#login" class="btn-login">Artist Login</a>
+        </div>
+        <button id="menu-toggle" class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
       </nav>
     </div>
   </header>
 
-  <!-- ================= HERO / LANDING ================= -->
+  <!-- HERO -->
   <section id="home" class="hero-section">
     <div class="hero-overlay"></div>
     <div class="hero-content container">
       <h2 class="hero-title">Experience Art Like Never Before</h2>
-      <p class="hero-text">Dive into a world of interactive galleries, curated exhibitions, and cultural insights from around the globe.</p>
-      <a href="#gallery" class="btn-primary">Explore the Gallery</a>
+      <p class="hero-subtitle">Immersive virtual galleries • Curated exhibitions • Global art marketplace</p>
+      <div class="hero-buttons">
+        <a href="#gallery" class="btn-primary btn-large">Explore Gallery</a>
+        <a href="#marketplace" class="btn-secondary btn-large">Browse Marketplace</a>
+      </div>
     </div>
   </section>
 
-  <!-- ================= FEATURED EXHIBITIONS ================= -->
-  <section id="exhibitions" class="featured-exhibitions container">
+  <!-- MARKETPLACE -->
+  <!-- MARKETPLACE (Teaser - Links to separate pages) -->
+<section id="marketplace" class="marketplace-section container">
+  <h2 class="section-title">Art Marketplace</h2>
+  <p class="section-subtitle">Discover original artwork from verified artists worldwide</p>
+  <div class="marketplace-teaser-grid">
+    <article class="marketplace-teaser-card fade-in-up">
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=250&fit=crop" alt="Featured Artwork">
+      <div class="teaser-content">
+        <h3>150+ New Listings</h3>
+        <p>Paintings, sculptures, digital art</p>
+        <a href="marketplace.html" class="btn-primary">Browse All Artworks</a>
+      </div>
+    </article>
+    <article class="marketplace-teaser-card fade-in-up" style="animation-delay: 0.2s;">
+      <img src="https://images.unsplash.com/photo-1579929933071-d9d5f1e9de68?w=400&h=250&fit=crop" alt="Artist Spotlight">
+      <div class="teaser-content">
+        <h3>Featured Artists</h3>
+        <p>Meet our top creators</p>
+        <a href="artists.html" class="btn-primary">View Artists</a>
+      </div>
+    </article>
+    <article class="marketplace-teaser-card fade-in-up" style="animation-delay: 0.4s;">
+      <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&h=250&fit=crop" alt="Auctions">
+      <div class="teaser-content">
+        <h3>Live Auctions</h3>
+        <p>Bid on exclusive pieces</p>
+        <a href="auctions.html" class="btn-accent">Join Auction</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery-section container">
+    <h2 class="section-title">Virtual Gallery</h2>
+    <div id="gallery-grid" class="gallery-grid">
+      <!-- Loading skeletons -->
+      <div class="gallery-item skeleton-item">
+        <div class="skeleton skeleton-image"></div>
+        <div class="skeleton-overlay"></div>
+      </div>
+      <div class="gallery-item skeleton-item">
+        <div class="skeleton skeleton-image"></div>
+        <div class="skeleton-overlay"></div>
+      </div>
+      <div class="gallery-item skeleton-item">
+        <div class="skeleton skeleton-image"></div>
+        <div class="skeleton-overlay"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXHIBITIONS -->
+  <section id="exhibitions" class="exhibitions-section container">
     <h2 class="section-title">Featured Exhibitions</h2>
     <div class="exhibition-grid">
-      <div class="exhibition-card">
-        <img src="images/exhibition1.jpg" alt="Exhibition 1">
+      <article class="exhibition-card">
+        <img src="https://images.unsplash.com/photo-1549489318-6f179e5f424b?w=400&h=250&fit=crop" alt="Modern Art Exhibition" class="card-image">
         <div class="card-content">
-          <h3>Modern Art Collection</h3>
-          <p>Explore contemporary masterpieces from renowned international artists.</p>
-          <a href="#" class="btn-secondary">View Details</a>
+          <h3>Modern Masters</h3>
+          <p>Contemporary masterpieces from leading international artists</p>
+          <div class="card-meta">
+            <span class="badge">12 Artists</span>
+            <span class="badge accent">Live Now</span>
+          </div>
+          <a href="#" class="btn-secondary">Enter Exhibition</a>
         </div>
-      </div>
-      <div class="exhibition-card">
-        <img src="images/exhibition2.jpg" alt="Exhibition 2">
-        <div class="card-content">
-          <h3>Historical Treasures</h3>
-          <p>Step back in time with rare artifacts and cultural relics.</p>
-          <a href="#" class="btn-secondary">View Details</a>
-        </div>
-      </div>
-      <!-- Add more exhibition cards dynamically later -->
+      </article>
+      <!-- More exhibition cards... -->
     </div>
   </section>
 
-  <!-- ================= GALLERY ================= -->
-  <section id="gallery" class="gallery-section container">
-    <h2 class="section-title">Gallery</h2>
-    <div id="gallery-grid" class="gallery-grid">
-      <!-- Gallery items will be dynamically loaded via API -->
-      <div class="gallery-item">
-        <img src="images/art1.jpg" alt="Artwork 1">
-        <div class="overlay">
-          <h3>Artwork Title</h3>
-          <p>Artist Name</p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <img src="images/art2.jpg" alt="Artwork 2">
-        <div class="overlay">
-          <h3>Artwork Title</h3>
-          <p>Artist Name</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ABOUT ================= -->
+  <!-- ABOUT -->
   <section id="about" class="about-section container">
-    <h2 class="section-title">About Museon</h2>
-    <div class="about-content">
-      <p>Museon is your digital gateway to art, culture, and history. Our mission is to make art accessible to everyone through interactive experiences and curated exhibitions.</p>
-      <video controls width="600">
-        <source src="videos/intro.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="about-grid">
+      <div class="about-text">
+        <h2 class="section-title">About Museon</h2>
+        <p>Museon bridges traditional museums and the digital world. Experience curated exhibitions in immersive 3D environments while discovering and purchasing original artwork from emerging and established artists worldwide.</p>
+        <div class="features-grid">
+          <div class="feature">
+            <i class="fas fa-vr-cardboard feature-icon"></i>
+            <h4>Virtual Reality</h4>
+            <p>Immersive 3D gallery experiences</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shopping-cart feature-icon"></i>
+            <h4>Secure Marketplace</h4>
+            <p>Buy/sell with confidence</p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-users feature-icon"></i>
+            <h4>Global Artists</h4>
+            <p>10,000+ verified creators</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
+  <!-- CONTACT -->
   <section id="contact" class="contact-section container">
-    <h2 class="section-title">Contact Us</h2>
+    <h2 class="section-title">Get In Touch</h2>
     <form id="contact-form" class="contact-form">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
       </div>
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
-      </div>
-      <button type="submit" class="btn-primary">Send Message</button>
+      <button type="submit" class="btn-primary btn-large">Send Message</button>
     </form>
   </section>
 
-  <!-- ================= LOGIN / REGISTER ================= -->
-  <section id="login" class="login-section container">
-    <h2 class="section-title">Login / Register</h2>
-    <form id="login-form" class="login-form">
-      <div class="form-group">
-        <label for="user-email">Email:</label>
-        <input type="email" id="user-email" name="email" placeholder="you@example.com" required>
-      </div>
-      <div class="form-group">
-        <label for="user-password">Password:</label>
-        <input type="password" id="user-password" name="password" placeholder="Enter password" required>
-      </div>
-      <button type="submit" class="btn-primary">Login</button>
-      <p>Don't have an account? <a href="#">Register here</a></p>
-    </form>
-  </section>
+  <!-- LOGIN MODAL -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h3>Artist Login</h3>
+      <form id="login-form" class="auth-form">
+        <div class="form-group">
+          <label for="user-email">Email</label>
+          <input type="email" id="user-email" name="email" placeholder="artist@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="user-password">Password</label>
+          <input type="password" id="user-password" name="password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-primary">Login</button>
+        <p class="auth-toggle">Don't have an account? <a href="#" id="show-register">Register here</a></p>
+      </form>
+    </div>
+  </div>
 
-  <!-- ================= FOOTER ================= -->
-  <footer id="main-footer" class="footer">
+  <!-- CART MODAL -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content cart-modal">
+      <span class="modal-close">&times;</span>
+      <h3>Your Cart (<span id="cart-total-items">0</span>)</h3>
+      <div id="cart-items"></div>
+      <div class="cart-total">
+        <strong>Total: $<span id="cart-total-price">0</span></strong>
+        <button class="btn-primary checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="container footer-container">
-      <p>&copy; 2026 Museon. All rights reserved.</p>
-      <div class="social-links">
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Museon</h3>
+          <p>Digital gateway to art, culture, and creativity</p>
+        </div>
+        <div class="footer-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Museon. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
       </div>
     </div>
   </footer>
 
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 </html>
