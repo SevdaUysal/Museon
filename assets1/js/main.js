@@ -29,7 +29,12 @@
 	// Touch?
 		if (browser.mobile)
 			$body.addClass('is-touch');
-
+		
+		// When Category is selected, add it to the URL as a query parameter
+		function getCategoryFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('category');
+}
 	// Forms.
 		var $form = $('form');
 
