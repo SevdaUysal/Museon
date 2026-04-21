@@ -1,272 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museon - Digital Art Museum & Marketplace</title>
-  <meta name="description" content="Immersive virtual galleries. Buy & sell original art from global artists.">
-  <meta name="keywords" content="art, museum, virtual gallery, marketplace, artists, buy art">
-  
-  <!-- Open Graph / SEO -->
-  <meta property="og:title" content="Museon - Digital Art Museum & Marketplace">
-  <meta property="og:description" content="Experience art like never before">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1579783902614-a3bd66f832ad?w=1200&h=630&fit=crop">
-  <meta property="og:url" content="https://yourdomain.com">
-  <meta property="og:type" content="website">
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  </noscript>
-  
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-</head>
-<body>
-  <!-- Skip to content -->
-  <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+<!DOCTYPE HTML>
+<!--
+	Multiverse by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Multiverse by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-  <!-- HEADER -->
-  <header id="main-header" class="header" role="banner">
-    <div class="container header-container">
-      <a href="/" id="logo" class="logo" aria-label="Museon Homepage">
-        <h1>Museon</h1>
-      </a>
-      
-      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
-        <ul class="nav-list" role="list">
-          <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
-          <li><a href="#marketplace" class="nav-link">Marketplace</a></li>
-          <li><a href="#exhibitions" class="nav-link">Exhibitions</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        
-        <div class="header-actions">
-          <button class="cart-icon" id="cart-icon" title="Shopping Cart" aria-label="View shopping cart">
-            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-            <span class="cart-count" id="cart-count" aria-live="polite">0</span>
-          </button>
-          <button class="btn-login" aria-haspopup="dialog" aria-expanded="false" aria-controls="login-modal">Artist Login</button>
-        </div>
-        
-        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-          <i class="fas fa-bars" aria-hidden="true"></i>
-          <span class="sr-only">Menu</span>
-        </button>
-      </nav>
-    </div>
-  </header>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-  <!-- HERO -->
-  <main id="main-content">
-    <section id="home" class="hero-section" role="banner" aria-labelledby="hero-title">
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-content container">
-        <h2 id="hero-title" class="hero-title">Experience Art Like Never Before</h2>
-        <p class="hero-subtitle">Immersive virtual galleries • Curated exhibitions • Global art marketplace</p>
-        <div class="hero-buttons">
-          <a href="#gallery" class="btn btn-primary btn-large">Explore Gallery</a>
-          <a href="#marketplace" class="btn btn-secondary btn-large">Browse Marketplace</a>
-        </div>
-      </div>
-    </section>
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html"><strong>Multiverse</strong> by HTML5 UP</a></h1>
+						<nav>
+							<ul>
+								<li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
+							</ul>
+						</nav>
+					</header>
 
-    <!-- MARKETPLACE -->
-    <section id="marketplace" class="marketplace-section container" role="region" aria-labelledby="marketplace-title">
-      <header>
-        <h2 id="marketplace-title" class="section-title">Art Marketplace</h2>
-        <p class="section-subtitle">Discover original artwork from verified artists worldwide</p>
-      </header>
-      
-      <div class="marketplace-teaser-grid" role="list">
-        <article class="marketplace-teaser-card" role="listitem">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=250&fit=crop&auto=format" 
-               alt="Featured artwork collection with 150+ new listings including paintings, sculptures, and digital art" 
-               loading="lazy">
-          <div class="teaser-content">
-            <h3>150+ New Listings</h3>
-            <p>Paintings, sculptures, digital art</p>
-            <a href="marketplace.html" class="btn btn-primary">Browse All Artworks</a>
-          </div>
-        </article>
-        
-        <article class="marketplace-teaser-card" role="listitem">
-          <img src="https://images.unsplash.com/photo-1579929933071-d9d5f1e9de68?w=400&h=250&fit=crop&auto=format" 
-               alt="Featured artists showcase" loading="lazy">
-          <div class="teaser-content">
-            <h3>Featured Artists</h3>
-            <p>Meet our top creators</p>
-            <a href="artists.html" class="btn btn-primary">View Artists</a>
-          </div>
-        </article>
-        
-        <article class="marketplace-teaser-card" role="listitem">
-          <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&h=250&fit=crop&auto=format" 
-               alt="Live art auctions with exclusive pieces" loading="lazy">
-          <div class="teaser-content">
-            <h3>Live Auctions</h3>
-            <p>Bid on exclusive pieces</p>
-            <a href="auctions.html" class="btn btn-accent">Join Auction</a>
-          </div>
-        </article>
-      </div>
-    </section>
+				<!-- Main -->
+					<div id="main">
+						<article class="thumb">
+							<a href="images/fulls/01.jpg" class="image"><img src="images/thumbs/01.jpg" alt="" /></a>
+							<h2>Magna feugiat lorem</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/02.jpg" class="image"><img src="images/thumbs/02.jpg" alt="" /></a>
+							<h2>Nisl adipiscing</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/03.jpg" class="image"><img src="images/thumbs/03.jpg" alt="" /></a>
+							<h2>Tempus aliquam veroeros</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/04.jpg" class="image"><img src="images/thumbs/04.jpg" alt="" /></a>
+							<h2>Aliquam ipsum sed dolore</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/05.jpg" class="image"><img src="images/thumbs/05.jpg" alt="" /></a>
+							<h2>Cursis aliquam nisl</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/06.jpg" class="image"><img src="images/thumbs/06.jpg" alt="" /></a>
+							<h2>Sed consequat phasellus</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/07.jpg" class="image"><img src="images/thumbs/07.jpg" alt="" /></a>
+							<h2>Mauris id tellus arcu</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/08.jpg" class="image"><img src="images/thumbs/08.jpg" alt="" /></a>
+							<h2>Nunc vehicula id nulla</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/09.jpg" class="image"><img src="images/thumbs/09.jpg" alt="" /></a>
+							<h2>Neque et faucibus viverra</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/10.jpg" class="image"><img src="images/thumbs/10.jpg" alt="" /></a>
+							<h2>Mattis ante fermentum</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/11.jpg" class="image"><img src="images/thumbs/11.jpg" alt="" /></a>
+							<h2>Sed ac elementum arcu</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+						<article class="thumb">
+							<a href="images/fulls/12.jpg" class="image"><img src="images/thumbs/12.jpg" alt="" /></a>
+							<h2>Vehicula id nulla dignissim</h2>
+							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
+						</article>
+					</div>
 
-    <!-- GALLERY -->
-    <section id="gallery" class="gallery-section container" role="region" aria-labelledby="gallery-title">
-      <h2 id="gallery-title" class="section-title">Virtual Gallery</h2>
-      <div id="gallery-grid" class="gallery-grid" role="list" aria-live="polite">
-        <div class="gallery-item skeleton-item" aria-hidden="true">
-          <div class="skeleton skeleton-image"></div>
-          <div class="skeleton-overlay"></div>
-        </div>
-        <div class="gallery-item skeleton-item" aria-hidden="true">
-          <div class="skeleton skeleton-image"></div>
-          <div class="skeleton-overlay"></div>
-        </div>
-        <div class="gallery-item skeleton-item" aria-hidden="true">
-          <div class="skeleton skeleton-image"></div>
-          <div class="skeleton-overlay"></div>
-        </div>
-      </div>
-    </section>
+				<!-- Footer -->
+					<footer id="footer" class="panel">
+						<div class="inner split">
+							<div>
+								<section>
+									<h2>Magna feugiat sed adipiscing</h2>
+									<p>Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum eget quis orci mattis aliquet. Maecenas fringilla et ante at lorem et ipsum. Dolor nulla eu bibendum sapien. Donec non pharetra dui. Nulla consequat, ex ut suscipit rutrum, mi dolor tincidunt erat, et scelerisque turpis ipsum.</p>
+								</section>
+								<section>
+									<h2>Follow me on ...</h2>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+									</ul>
+								</section>
+								<p class="copyright">
+									&copy; Unttled. Design: <a href="http://html5up.net">HTML5 UP</a>.
+								</p>
+							</div>
+							<div>
+								<section>
+									<h2>Get in touch</h2>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<input type="text" name="name" id="name" placeholder="Name" />
+											</div>
+											<div class="field half">
+												<input type="text" name="email" id="email" placeholder="Email" />
+											</div>
+											<div class="field">
+												<textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+							</div>
+						</div>
+					</footer>
 
-    <!-- EXHIBITIONS -->
-    <section id="exhibitions" class="exhibitions-section container" role="region" aria-labelledby="exhibitions-title">
-      <h2 id="exhibitions-title" class="section-title">Featured Exhibitions</h2>
-      <div class="exhibition-grid" role="list">
-        <article class="exhibition-card" role="listitem">
-          <img src="https://images.unsplash.com/photo-1549489318-6f179e5f424b?w=400&h=250&fit=crop&auto=format" 
-               alt="Modern Art Exhibition - Contemporary masterpieces" 
-               loading="lazy" class="card-image">
-          <div class="card-content">
-            <h3>Modern Masters</h3>
-            <p>Contemporary masterpieces from leading international artists</p>
-            <div class="card-meta">
-              <span class="badge" aria-label="12 artists featured">12 Artists</span>
-              <span class="badge accent" aria-label="Exhibition is currently live">Live Now</span>
-            </div>
-            <a href="#" class="btn btn-secondary">Enter Exhibition</a>
-          </div>
-        </article>
-      </div>
-    </section>
+			</div>
 
-    <!-- ABOUT -->
-    <section id="about" class="about-section container" role="region" aria-labelledby="about-title">
-      <h2 id="about-title" class="section-title">About Museon</h2>
-      <p>Museon bridges traditional museums and the digital world. Experience curated exhibitions in immersive 3D environments while discovering and purchasing original artwork from emerging and established artists worldwide.</p>
-      
-      <div class="features-grid" role="list">
-        <div class="feature" role="listitem">
-          <i class="fas fa-vr-cardboard feature-icon" aria-hidden="true"></i>
-          <h4>Virtual Reality</h4>
-          <p>Immersive 3D gallery experiences</p>
-        </div>
-        <div class="feature" role="listitem">
-          <i class="fas fa-shopping-cart feature-icon" aria-hidden="true"></i>
-          <h4>Secure Marketplace</h4>
-          <p>Buy/sell with confidence</p>
-        </div>
-        <div class="feature" role="listitem">
-          <i class="fas fa-users feature-icon" aria-hidden="true"></i>
-          <h4>Global Artists</h4>
-          <p>10,000+ verified creators</p>
-        </div>
-      </div>
-    </section>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section container" role="region" aria-labelledby="contact-title">
-      <h2 id="contact-title" class="section-title">Get In Touch</h2>
-      <form id="contact-form" class="contact-form" novalidate aria-describedby="form-instructions">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Full Name <span aria-hidden="true">*</span></label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required 
-                   aria-describedby="name-error" aria-invalid="false">
-            <span id="name-error" class="error-message" role="alert" aria-live="polite"></span>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address <span aria-hidden="true">*</span></label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required 
-                   aria-describedby="email-error" aria-invalid="false">
-            <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="message">Message <span aria-hidden="true">*</span></label>
-          <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required 
-                    aria-describedby="message-error" aria-invalid="false"></textarea>
-          <span id="message-error" class="error-message" role="alert" aria-live="polite"></span>
-        </div>
-        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
-      </form>
-    </section>
-  </main>
-
-  <!-- LOGIN MODAL -->
-  <dialog id="login-modal" class="modal" aria-labelledby="login-title" aria-modal="true">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Close login modal">×</button>
-      <h3 id="login-title">Artist Login</h3>
-      <form id="login-form" class="auth-form" novalidate>
-        <div class="form-group">
-          <label for="user-email">Email</label>
-          <input type="email" id="user-email" name="email" placeholder="artist@example.com" required>
-        </div>
-        <div class="form-group">
-          <label for="user-password">Password</label>
-          <input type="password" id="user-password" name="password" placeholder="••••••••" required>
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-        <p class="auth-toggle">Don't have an account? <a href="#" id="show-register">Register here</a></p>
-      </form>
-    </div>
-  </dialog>
-
-  <!-- CART MODAL -->
-  <dialog id="cart-modal" class="modal" aria-labelledby="cart-title" aria-modal="true">
-    <div class="modal-content cart-modal">
-      <button class="modal-close" aria-label="Close cart modal">×</button>
-      <h3 id="cart-title">Your Cart (<span id="cart-total-items">0</span>)</h3>
-      <div id="cart-items" role="log" aria-live="polite"></div>
-      <div class="cart-total">
-        <strong>Total: $<span id="cart-total-price">0</span></strong>
-        <button class="btn btn-primary checkout-btn">Checkout</button>
-      </div>
-    </div>
-  </dialog>
-
-  <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
-    <div class="container footer-container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3>Museon</h3>
-          <p>Digital gateway to art, culture, and creativity</p>
-        </div>
-        <nav class="footer-links" aria-label="Social media links">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-          <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-        </nav>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2024 Museon. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
-  <script src="js/main.js" defer></script>
-</body>
+	</body>
 </html>
