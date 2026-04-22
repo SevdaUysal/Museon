@@ -9,6 +9,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets1/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets1/css/noscript.css" /></noscript>
+		<style>
+		/* FORCE product visibility */
+		.thumb {
+			transition: all 0.5s ease !important;
+		}
+		.thumb.show {
+			display: block !important;
+			visibility: visible !important;
+			opacity: 1 !important;
+		}
+		.thumb:not(.show) {
+			display: none !important;
+			visibility: hidden !important;
+			opacity: 0 !important;
+		}
+		</style>
 	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
@@ -42,7 +58,7 @@
 							<li><a href="index.html">Artworks</a></li>
 							<li><a href="generic1.html">About</a></li>
 							<li><a href="generic1.html">Cart</a></li>
-							<li><a href="elements1.html">Contact</a></li>
+							<li><a href="http://localhost/museon/login.php">Login</a></li>
 						</ul>
 					</nav>
 
@@ -54,22 +70,24 @@
 								<h2>Discover curated masterpieces<br>Explore a new generation of independent artists<br>All in one place</h2>
 							</header>
 							<section class="tiles">
+								<!-- Replace your tiles hrefs -->
 								<article class="style1">
 									<span class="image">
 										<img src="assets1/images/pic01.jpg" alt="" />
 									</span>
-									<a href="generic1.html">
+									<a href="index.html?category=abstract">
 										<h2>Abstract</h2>
 										<div class="content">
 											<p>Shapes & Color</p>
 										</div>
 									</a>
 								</article>
+
 								<article class="style2">
 									<span class="image">
 										<img src="assets1/images/pic02.jpg" alt="" />
 									</span>
-									<a href="generic1.html">
+									<a href="index.html?category=landscape">
 										<h2>Landscape</h2>
 										<div class="content">
 											<p>Nature Scenes</p>
@@ -80,7 +98,7 @@
 									<span class="image">
 										<img src="assets1/images/pic04.jpg" alt="" />
 									</span>
-									<a href="generic1.html">
+									<a href="index.html">
 										<h2>Portrait</h2>
 										<div class="content">
 											<p>Human Figures</p>
@@ -91,7 +109,7 @@
 									<span class="image">
 										<img src="assets1/images/pic05.jpg" alt="" />
 									</span>
-									<a href="generic1.html">
+									<a href="index.html">
 										<h2>Surreal</h2>
 										<div class="content">
 											<p>Dreamlike Imagery</p>
@@ -102,7 +120,7 @@
 									<span class="image">
 										<img src="assets1/images/pic06.jpg" alt="" />
 									</span>
-									<a href="generic1.html">
+									<a href="index.html">
 										<h2>Classical</h2>
 										<div class="content">
 											<p>Traditional Art</p>
@@ -113,7 +131,7 @@
 									<span class="image">
 										<img src="assets1/images/pic03.jpg" alt="" />
 									</span>
-									<a href="generic1.html">
+									<a href="index.html">
 										<h2>Sculpture</h2>
 										<div class="content">
 											<p>Three-Dimensional Art</p>
@@ -173,6 +191,5 @@
 			<script src="assets1/js/breakpoints.min.js"></script>
 			<script src="assets1/js/util.js"></script>
 			<script src="assets1/js/main.js"></script>
-
 	</body>
 </html>
