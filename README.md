@@ -14,9 +14,11 @@ Multimedia and Web Design Course Project
 
 ## 🛠️ Files
 index.html
-marketplace.html
-style.css
-main.js
-marketplace.js
+index1.html
+About.html
+cart.html
+login.php
+assets/
+assets1/
 
 Made for artists and art lovers and museum lovers and culture lovers 🚀

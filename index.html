@@ -21,9 +21,6 @@
 						<h1><a href="index.html"><strong>Artworks</strong></a></h1>
 						<nav>
 							<ul>
-								<li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
-							</ul>
-							<ul>
 								<li><a href="index1.html">Home</a></li> <!--dont forget to add this to the artworks page to navigate to the home page-->
 							</ul>
 						</nav>
@@ -31,132 +28,9 @@
 
 				<!-- Main -->
 					<div id="main">
-						<article class="thumb abstract-thumb" data-category="abstract">
-							<a href="assets/css/images1/fulls/01.jpg" class="image">
-								<img src="assets/css/images1/thumbs/01.jpg" alt="Magna feugiat lorem" />
-								
-								<!-- Overlay - Hidden by default -->
-								<!--<div class="image-overlay">
-									<div class="overlay-content">
-										<div class="price">$29.99</div>
-										<button class="add-to-cart-btn" data-product-id="1">
-											<i class="fas fa-shopping-cart"></i> Add to Cart
-										</button>
-									</div>
-								</div>-->
-							</a>
-							<h2>Magna feugiat lorem</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb abstract-thumb" data-category="abstract">
-							<a href="assets/css/images1/fulls/02.jpg" class="image"><img src="assets/css/images1/thumbs/01.jpg" alt="" /></a>
-							<h2>Nisl adipiscing</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb landscape-thumb" data-category="landscape">
-							<a href="assets/css/images1/fulls/02.jpg" class="image"><img src="assets/css/images1/thumbs/02.jpg" alt="" /></a>
-							<h2>Tempus aliquam veroeros</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images1/fulls/04.jpg" class="image"><img src="images1/thumbs/04.jpg" alt="" /></a>
-							<h2>Aliquam ipsum sed dolore</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images1/fulls/05.jpg" class="image"><img src="images1/thumbs/05.jpg" alt="" /></a>
-							<h2>Cursis aliquam nisl</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images1/fulls/06.jpg" class="image"><img src="images1/thumbs/06.jpg" alt="" /></a>
-							<h2>Sed consequat phasellus</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images1/fulls/07.jpg" class="image"><img src="images1/thumbs/07.jpg" alt="" /></a>
-							<h2>Mauris id tellus arcu</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images1/fulls/08.jpg" class="image"><img src="images1/thumbs/08.jpg" alt="" /></a>
-							<h2>Nunc vehicula id nulla</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images1/fulls/09.jpg" class="image"><img src="images1/thumbs/09.jpg" alt="" /></a>
-							<h2>Neque et faucibus viverra</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images1/fulls/10.jpg" class="image"><img src="images1/thumbs/10.jpg" alt="" /></a>
-							<h2>Mattis ante fermentum</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images1/fulls/11.jpg" class="image"><img src="images1/thumbs/11.jpg" alt="" /></a>
-							<h2>Sed ac elementum arcu</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
-						<article class="thumb">
-							<a href="images1/fulls/12.jpg" class="image"><img src="images1/thumbs/12.jpg" alt="" /></a>
-							<h2>Vehicula id nulla dignissim</h2>
-							<p>Nunc blandit nisi ligula magna sodales lectus elementum non. Integer id venenatis velit.</p>
-						</article>
+						<p id="gallery-loading" style="text-align:center;padding:4em 2em;font-size:1.1em;opacity:0.7;">Loading artworks...</p>
 					</div>
-					<script>
-				class ShoppingCart {
-					constructor() {
-						this.cart = JSON.parse(localStorage.getItem('cart')) || {};
-						this.init();
-					}
 
-					init() {
-						document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
-							btn.addEventListener('click', (e) => this.addToCart(e));
-						});
-					}
-
-					addToCart(e) {
-						e.preventDefault(); // Prevent link navigation
-						const btn = e.target.closest('.add-to-cart-btn');
-						const productId = btn.dataset.productId;
-						const article = btn.closest('.thumb');
-						const productName = article.querySelector('h2').textContent;
-						const price = parseFloat(article.dataset.price);
-
-						if (!this.cart[productId]) {
-							this.cart[productId] = { name: productName, price: price, quantity: 0 };
-						}
-						this.cart[productId].quantity += 1;
-
-						localStorage.setItem('cart', JSON.stringify(this.cart));
-						this.showSuccess(btn);
-						this.updateCartCounter();
-					}
-
-					showSuccess(btn) {
-						const originalHTML = btn.innerHTML;
-						btn.innerHTML = '<i class="fas fa-check"></i> Added!';
-						btn.classList.add('added-to-cart');
-						
-						setTimeout(() => {
-							btn.innerHTML = originalHTML;
-							btn.classList.remove('added-to-cart');
-						}, 1500);
-					}
-
-					updateCartCounter() {
-						const totalItems = Object.values(this.cart).reduce((sum, item) => sum + item.quantity, 0);
-						const cartCounter = document.querySelector('.cart-counter');
-						if (cartCounter) cartCounter.textContent = totalItems;
-					}
-				}
-
-				document.addEventListener('DOMContentLoaded', () => {
-					new ShoppingCart();
-				});
-				</script>				
 				<!-- Footer -->
 					<footer id="footer" class="panel">
 						<div class="inner split">
@@ -214,6 +88,102 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+		<script>
+	const PEXELS_API_KEY = 'ZTc4AhvawzLUHfBBbM4MEwgj0FqZkZ249QSH8O1tUCPDrrEr4g9K9eHO';
+
+	// Favorites storage
+	const favorites = JSON.parse(localStorage.getItem('favorites')) || {};
+
+	function saveFavorites() {
+		localStorage.setItem('favorites', JSON.stringify(favorites));
+	}
+
+	function toggleFavorite(photo) {
+		if (favorites[photo.id]) {
+			delete favorites[photo.id];
+		} else {
+			favorites[photo.id] = photo;
+		}
+		saveFavorites();
+	}
+
+	(async function () {
+		const params = new URLSearchParams(window.location.search);
+		const category = params.get('category') || 'Art';
+
+		document.title = category + ' — Museon';
+
+		const headerStrong = document.querySelector('#header h1 strong');
+		if (headerStrong) headerStrong.textContent = category;
+
+		const main = document.getElementById('main');
+
+		try {
+			const res = await fetch(
+				'https://api.pexels.com/v1/search?query=' + encodeURIComponent(category) + '&per_page=15',
+				{
+					headers: { Authorization: PEXELS_API_KEY }
+				}
+			);
+
+			if (!res.ok) throw new Error('HTTP ' + res.status);
+
+			const { photos } = await res.json();
+			main.innerHTML = '';
+
+			if (!photos || photos.length === 0) {
+				main.innerHTML =
+					'<p style="text-align:center;padding:4em;">No artworks found for &ldquo;' +
+					category +
+					'&rdquo;.</p>';
+				return;
+			}
+
+			photos.forEach(function (photo) {
+				const article = document.createElement('article');
+				article.className = 'thumb';
+
+				article.innerHTML =
+				'<a href="' + photo.src.large2x + '" class="image" target="_blank">' +
+					'<img src="' + photo.src.medium + '" alt="' + (photo.alt || category) + '" />' +
+				'</a>' +
+
+				'<button class="like-btn" data-id="' + photo.id + '">' +
+					(favorites[photo.id] ? '❤️' : '🤍') +
+				'</button>' +
+
+				'<h2>' + photo.photographer + '</h2>' +
+				'<p>' + (photo.alt || category + ' artwork') + '</p>';
+
+				// Like button logic
+				const likeBtn = article.querySelector('.like-btn');
+
+				likeBtn.addEventListener('click', () => {
+					toggleFavorite({
+						id: photo.id,
+						img: photo.src.medium,
+						full: photo.src.large2x,
+						title: photo.photographer,
+						desc: photo.alt || category
+					});
+
+					likeBtn.textContent = favorites[photo.id] ? '❤️' : '🤍';
+				});
+
+				main.appendChild(article);
+			});
+
+		} catch (err) {
+			main.innerHTML =
+				'<p style="text-align:center;padding:4em;color:#c00;">' +
+				'Failed to load artworks. Check your API key.' +
+				'</p>';
+
+			console.error(err);
+		}
+	})();
+</script>
 
 	</body>
 </html>
