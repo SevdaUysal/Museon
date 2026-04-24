@@ -6,7 +6,6 @@ Multimedia and Web Design Course Project
 
 ## 🚀 Features
 - 🖼️ 3D gallery with hover effects
-- 🛒 Shopping cart & checkout
 - 📱 Mobile responsive
 - ⚡ Fast loading
 - 🎨 Modern design
@@ -14,9 +13,9 @@ Multimedia and Web Design Course Project
 
 ## 🛠️ Files
 index.html
-index1.html
+index1.php
 About.html
-cart.html
+favorites.html
 login.php
 assets/
 assets1/
