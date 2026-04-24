@@ -37,7 +37,7 @@
         <!-- Header -->
         <header id="header">
             <div class="inner">
-                <a href="index1.php" class="logo">
+                <a href="index.php" class="logo">
                     <span class="symbol"><img src="assets1/images/logo.png" alt="" /></span>
                     <span class="title">Museon</span>
                 </a>
@@ -51,11 +51,11 @@
             <ul>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <li>Welcome, <?= $_SESSION['username']; ?></li>
-                    <li><a href="index1.php">Home</a></li>
-                    <li><a href="http://localhost/museon/logout.php">Logout</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="logout.php">Logout</a></li>
                 <?php else: ?>
-                    <li><a href="index1.php">Home</a></li>
-                    <li><a href="http://localhost/museon/login.php">Login</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="login.php">Login</a></li>
                 <?php endif; ?>
                 <li><a href="favorites.html">Favorites</a></li>
                 <li><a href="About.html">About</a></li>
@@ -72,37 +72,37 @@
                 <section class="tiles">
                     <article class="style1">
                         <span class="image"><img src="assets1/images/pic01.jpg" alt="" /></span>
-                        <a href="index.html?category=abstract">
+                        <a href="index2.html?category=abstract">
                             <h2>Abstract</h2><div class="content"><p>Shapes & Color</p></div>
                         </a>
                     </article>
                     <article class="style2">
                         <span class="image"><img src="assets1/images/pic02.jpg" alt="" /></span>
-                        <a href="index.html?category=landscape art">
+                        <a href="index2.html?category=landscape art">
                             <h2>Landscape</h2><div class="content"><p>Nature Scenes</p></div>
                         </a>
                     </article>
                     <article class="style4">
                         <span class="image"><img src="assets1/images/pic04.jpg" alt="" /></span>
-                        <a href="index.html?category=portrait art">
+                        <a href="index2.html?category=portrait art">
                             <h2>Portrait</h2><div class="content"><p>Human Figures</p></div>
                         </a>
                     </article>
                     <article class="style5">
                         <span class="image"><img src="assets1/images/pic05.jpg" alt="" /></span>
-                        <a href="index.html?category=surreal art">
+                        <a href="index2.html?category=surreal art">
                             <h2>Surreal</h2><div class="content"><p>Dreamlike Imagery</p></div>
                         </a>
                     </article>
                     <article class="style6">
                         <span class="image"><img src="assets1/images/pic06.jpg" alt="" /></span>
-                        <a href="index.html?category=old and traditional drawings">
+                        <a href="index2.html?category=old and traditional drawings">
                             <h2>Classical</h2><div class="content"><p>Traditional Art</p></div>
                         </a>
                     </article>
                     <article class="style3">
                         <span class="image"><img src="assets1/images/pic03.jpg" alt="" /></span>
-                        <a href="index.html?category=sculpture">
+                        <a href="index2.html?category=sculpture">
                             <h2>Sculpture</h2><div class="content"><p>Three-Dimensional Art</p></div>
                         </a>
                     </article>

@@ -12,11 +12,13 @@ Multimedia and Web Design Course Project
 
 
 ## 🛠️ Files
-index.html
-index1.php
+index2.html
+index.php
 About.html
 favorites.html
 login.php
+logout.php
+contact.php
 assets/
 assets1/
 
