@@ -2,8 +2,6 @@
 Multimedia and Web Design Course Project
 # 🎨 Museon - Art Museum & Marketplace
 
-**Virtual art galleries** + **buy/sell marketplace** for artists.
-
 ## 🚀 Features
 - 🖼️ 3D gallery with hover effects
 - 📱 Mobile responsive
@@ -22,4 +20,4 @@ contact.php
 assets/
 assets1/
 
-Made for artists and art lovers and museum lovers and culture lovers 🚀
+Made for artists and art lovers and culture lovers 🚀
